@@ -38,9 +38,8 @@ class SyncParcelSheet extends Command
      *
      * @return int
      */
-    public function handle(GoogleSheetService $sheet, ParcelAutomationService $automation)
+    /*public function handle(GoogleSheetService $sheet, ParcelAutomationService $automation)
     {
-        // return 0;
 
         $rows = $sheet->fetchRows();
 
@@ -49,5 +48,15 @@ class SyncParcelSheet extends Command
         $this->info('Parcel notification process completed');
 
         return Command::SUCCESS;
+    }*/
+    
+    public function handle(ParcelAutomationService $automation)
+    {
+        $automation->sync();
+
+        $this->info('Parcel notification process completed');
+
+        return Command::SUCCESS;
     }
+    
 }

@@ -4,9 +4,25 @@ namespace App\Services;
 
 use App\Models\ParcelUpdate;
 use App\Jobs\DispatchParcelNotification;
+use App\Services\GoogleSheetService;
 
 class ParcelAutomationService
 {
+    
+    protected $sheet;
+
+    public function __construct(GoogleSheetService $sheet)
+    {
+        $this->sheet = $sheet;
+    }
+
+    public function sync()
+    {
+        $rows = $this->sheet->fetchRows();
+
+        $this->processSheetRows($rows);
+    }
+    
 
     public function processSheetRows($rows)
     {
@@ -24,6 +40,12 @@ class ParcelAutomationService
 
             $parcel = ParcelUpdate::createParcel($name, $email, $parcel_status);
 
+            if (!$parcel->updated_at && $parcel->parcel_status == 'Out For Delivery') {
+                DispatchParcelNotification::dispatch($parcel);
+
+                // mark as notified
+                $parcel->update(['updated_at' => now()]);
+            }
 
         }
 

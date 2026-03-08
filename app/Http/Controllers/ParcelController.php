@@ -26,15 +26,14 @@ class ParcelController extends Controller
                 'email'         => $parcel->email,
                 'parcel_status' => $parcel->parcel_status,
                 'created_at'    => $parcel->created_at,
-                'updated_at'    => $parcel->updated_at ? Carbon::parse($parcel->updated_at)->diffForHumans() : 'Not sent yet',
+                'updated_at'    => ($parcel->updated_at && $parcel->parcel_status == 'Out For Delivery') ? Carbon::parse($parcel->updated_at)->diffForHumans() : 'Not sent yet',
             ];
         }
-
         return view('dashboard', compact('parcels'));
 
     }
 
-
+    /*
     public function sync(
         GoogleSheetService $sheet,
         ParcelAutomationService $automation
@@ -46,6 +45,14 @@ class ParcelController extends Controller
 
         return redirect('/')->with('success','Spreadsheet synced successfully');
 
+    }*/
+    
+    public function sync(ParcelAutomationService $automation)
+    {
+        $automation->sync();
+
+        return redirect('/')
+            ->with('success','Spreadsheet synced successfully');
     }
 
     public function sendEmails()
@@ -59,8 +66,10 @@ class ParcelController extends Controller
             return redirect('/')->with('error', 'Please sync spreadsheet first.');
         } else {
             foreach ($parcels as $parcel) {
-                $job = new DispatchParcelNotification($parcel);
-                $job->handle();
+                if($parcel->parcel_status == 'Out For Delivery'){
+                    $job = new DispatchParcelNotification($parcel);
+                    $job->handle();
+                }
             }
             return redirect('/')->with('success','Out For Delivery emails sent');
         }
