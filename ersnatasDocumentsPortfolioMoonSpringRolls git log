@@ -1,0 +1,508 @@
+[33mcommit 926b851387e978450029fad297d1da19fc2f642c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: natasyaazhar <natasyaazhar.work@gmail.com>
+Date:   Mon Mar 9 02:22:44 2026 +0800
+
+    Initial commit with README
+
+[33mcommit 843a4f81eb25b88b225a89d75a2d3c274e81be6b[m[33m ([m[1;33mtag: [m[1;33mv8.6.12[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Apr 12 15:37:49 2022 +0200
+
+    Update server.php (#5863)
+
+[33mcommit 6c1f430aa76809084668f9a97121bd2ca8bafa10[m
+Author: Dries Vints <dries@vints.io>
+Date:   Thu Feb 10 17:51:03 2022 +0100
+
+    Revert "Fix .gitattributes consistency with .editorconfig (#5802)" (#5809)
+    
+    This reverts commit 207a23e4a1267e65b268a1ee09afdbc5f5e1beea.
+
+[33mcommit 207a23e4a1267e65b268a1ee09afdbc5f5e1beea[m
+Author: ThisGitHubUsernameWasAvailable <89264810+ThisGitHubUsernameWasAvailable@users.noreply.github.com>
+Date:   Wed Feb 9 17:55:45 2022 +0300
+
+    Fix .gitattributes consistency with .editorconfig (#5802)
+    
+    `lf` EOL is defined in `.editorconfig` but missed in `.gitattributes`, so here is the fix.
+    This little fix helps keep the EOL consistent across the project and ensures it doesn't get messed up by GitHub Desktop or any other GIT client.
+
+[33mcommit 4c6186ac6207336b35bfdaf2669012711ac06d83[m
+Author: driesvints <driesvints@users.noreply.github.com>
+Date:   Tue Feb 8 16:08:54 2022 +0000
+
+    Update CHANGELOG.md
+
+[33mcommit 79805bc1c4a4db517bbb14b05b43c76ff185d5a6[m[33m ([m[1;33mtag: [m[1;33mv8.6.11[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Feb 8 15:36:57 2022 +0100
+
+    [8.x] Auto update changelog file with a new release (#5801)
+    
+    * Create update-changelog.md
+    
+    * Update .gitattributes
+    
+    * Rename update-changelog.md to update-changelog.yml
+
+[33mcommit 4c5b7742946736fc72d2e32a3d82ba75426ab784[m
+Author: Andrey Helldar <helldar@ai-rus.com>
+Date:   Mon Feb 7 01:42:53 2022 +0300
+
+    Added missing dot in `required_array_keys` validation rule (#5798)
+
+[33mcommit 096638ea9a883495f4eddace63fde5a7fb1b2b1f[m
+Author: Dries Vints <dries@vints.io>
+Date:   Thu Feb 3 16:06:00 2022 +0100
+
+    Update the default Argon2 options
+
+[33mcommit 94771229eaf6039a97dbdd84b09a4525732b7e97[m
+Merge: 926c48e8 9051a027
+Author: Dries Vints <dries@vints.io>
+Date:   Thu Feb 3 10:38:16 2022 +0100
+
+    Merge pull request #5795 from emaia/patch-1
+    
+    Fix alphabetical order
+
+[33mcommit 9051a027c56a415e81063ad587a143b276956ad9[m
+Author: Emaia <dina.maia@gmail.com>
+Date:   Wed Feb 2 22:57:23 2022 -0300
+
+    Fix alphabetical order
+
+[33mcommit 926c48e8562e36811159d615ba27ebb2929d0378[m
+Author: Taylor Otwell <taylor@laravel.com>
+Date:   Tue Feb 1 11:48:12 2022 -0600
+
+    add validation language line
+
+[33mcommit 5ae2f24a0411d6907adca42ceb2d1e7f7ffa7fd9[m
+Author: Taylor Otwell <taylor@laravel.com>
+Date:   Tue Feb 1 08:43:03 2022 -0600
+
+    fix spacing
+
+[33mcommit 8d08717f15d1bddf3d28124b928ccc3a5cfdf84b[m
+Author: Taylor Otwell <taylor@laravel.com>
+Date:   Thu Jan 6 15:31:01 2022 -0600
+
+    Update README.md
+
+[33mcommit 56a73db2e34f5aa8befffcce40aaaa92e2d7393c[m[33m ([m[1;33mtag: [m[1;33mv8.6.10[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Wed Dec 22 11:07:28 2021 +0100
+
+    Update CHANGELOG.md
+
+[33mcommit f79296dcd548c0ced169f6453d75f231fee407fc[m
+Author: Bilal Al-Massry <33354606+bilalalmassry@users.noreply.github.com>
+Date:   Mon Dec 20 17:12:28 2021 +0200
+
+    Add mac_address validation message (#5754)
+
+[33mcommit 1ea351916efb0e6d96c5761996fcd361dee4630c[m
+Author: Dries Vints <dries@vints.io>
+Date:   Fri Dec 17 15:40:10 2021 +0100
+
+    Update validation.php (#5753)
+
+[33mcommit 472d31e5f2f6ce36e1b4146bfae0eb77f15ac0c0[m
+Author: Zeros Developer <33526722+ZerosDev@users.noreply.github.com>
+Date:   Thu Dec 16 22:06:59 2021 +0700
+
+    Simplify the maintenance file call (#5752)
+    
+    * Simplify the maintenance file call
+    
+    * Update index.php
+    
+    Co-authored-by: Taylor Otwell <taylor@laravel.com>
+
+[33mcommit e999e1d07c9f56b0d18cce8fa9addc736339e904[m
+Author: Dries Vints <dries@vints.io>
+Date:   Wed Dec 15 14:49:21 2021 +0100
+
+    Update composer.json (#5750)
+
+[33mcommit 4bc502bba6b7bcbc8007c061621266fe8f989e07[m
+Author: underwood <scott@underwood.co>
+Date:   Thu Dec 9 16:09:19 2021 -0600
+
+    Delete web.config (#5744)
+    
+    During a security audit one of the few recommendations they made was to remove or limit access to web.config.
+    
+    Since this is mainly used by Microsoft IIS server it isn't necessary for most Laravel projects and could be added if someone is using Microsoft server.
+
+[33mcommit 7e78e26c7ce45fe1716b82ecbecd6a808a0e7f8b[m[33m ([m[1;33mtag: [m[1;33mv8.6.9[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Dec 7 17:10:22 2021 +0100
+
+    Update CHANGELOG.md
+
+[33mcommit 68a0dbed64604405aeb23739ef1304c561f3bc82[m
+Author: Rob Lister <rob@lonap.net>
+Date:   Mon Dec 6 14:24:41 2021 +0000
+
+    [8.x] Add option to set sendmail path. Fix default (#5741)
+    
+    * Add option to set sendmail path. Fix default
+    
+    Testing this in an application, it would seem that sendmail -bs is the wrong option for this case?
+    
+    What Laravel appears to do is pipe an RFC-2822 formatted message on STDIN and requires the sendmail emulation to deal with it,
+    rather than -bs which initiates an SMTP session.
+    
+    if Exim is the default MTA then -t would seem to be the correct option.
+    
+    If you have an alternative installed instead of sendmail/exim, then there's no way to set the path, so I added MAIL_SENDMAIL_PATH
+    so you can do, e.g.:
+    
+    MAIL_SENDMAIL_PATH="/usr/bin/msmtp -t --tls=off --from=${MAIL_FROM_ADDRESS} --auto-from=off"
+    
+    msmtp doesn't support -bs at all
+    
+    * Update mail.php
+    
+    Co-authored-by: Taylor Otwell <taylor@laravel.com>
+
+[33mcommit 8a62ca263323b3b8415b627aeda7533ab2bb5da8[m
+Author: Nuno Maduro <enunomaduro@gmail.com>
+Date:   Fri Dec 3 15:04:57 2021 +0000
+
+    Improves generic types on the skeleton (#5740)
+
+[33mcommit 7bf32280e20d1cbb487ed009ef9d6f268e4badf6[m
+Author: Bram <bram.agjm1@gmail.com>
+Date:   Thu Dec 2 21:40:24 2021 +0100
+
+    [8.x] Add types to arrays in boilerplate (#5738)
+    
+    * Add more specific types
+    
+    * Update Authenticate.php
+    
+    * Update Authenticate.php
+
+[33mcommit e35899f0aa2698f31cae410116d9a75e0d5a201a[m
+Author: Micheal Mand <micheal@kmdwebdesigns.com>
+Date:   Wed Nov 24 19:07:41 2021 -0700
+
+    Fix asset publishing if they were already published (#5734)
+    
+    Thank you @sebdesign for the fix.
+
+[33mcommit 901879dd68d276af4d937b3bf0e2a2467d8efa09[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Nov 23 18:31:14 2021 +0100
+
+    Update CHANGELOG.md
+
+[33mcommit 0eb4a40eb38a92102be63234b041954914c5bbce[m[33m ([m[1;33mtag: [m[1;33mv8.6.8[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Nov 23 18:30:45 2021 +0100
+
+    Update CHANGELOG.md
+
+[33mcommit 3de91bca75bd8745e2a8f7d0dd4a3548e3fe2098[m
+Author: N'Bayramberdiyev <nbayramberdiyev@gmail.com>
+Date:   Fri Nov 19 16:51:42 2021 +0300
+
+    sort validation rules alphabetically (#5728)
+
+[33mcommit 33ceba78baba318237964646980f275df12e413f[m
+Author: Nuno Maduro <enunomaduro@gmail.com>
+Date:   Thu Nov 18 16:18:32 2021 +0000
+
+    Removes the commands property (#5727)
+
+[33mcommit f8ff35e070e29e7415069b5d1bfabab1c8cb9c55[m[33m ([m[1;33mtag: [m[1;33mv8.6.7[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Nov 16 17:49:31 2021 +0100
+
+    Update CHANGELOG.md
+
+[33mcommit 2079d34cfcc9cd987f4e00055e5f98df84358660[m
+Author: Rahul Dey <rahul900day@gmail.com>
+Date:   Tue Nov 16 02:40:04 2021 +0530
+
+    Update sanctum.php (#5725)
+
+[33mcommit c112d149c4778d2eb75f0b514fe73f653f8f9ac6[m
+Author: Nicklas Kevin Frank <Frozire@users.noreply.github.com>
+Date:   Thu Nov 11 15:20:34 2021 +0100
+
+    Added declined and declined_if validation rules (#5723)
+
+[33mcommit bad350d1999cbaf2036db9646ddef63d77537e80[m[33m ([m[1;33mtag: [m[1;33mv8.6.6[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Nov 9 18:29:24 2021 +0100
+
+    Update CHANGELOG.md
+
+[33mcommit 399d435c4f0b41a5b6d3e14894195f9196d36bb8[m
+Author: Taylor Otwell <taylor@laravel.com>
+Date:   Tue Nov 9 09:56:23 2021 -0600
+
+    add facade
+
+[33mcommit 79249c920b45943ecdddb5d968d0a05d0a4bf3d6[m
+Author: Braden Keith <bradenkeith@gmail.com>
+Date:   Fri Nov 5 10:45:57 2021 -0400
+
+    Added Romega Software to Sponsorships (#5721)
+
+[33mcommit ca8e5d65da361d070e637d0d82a8eb49b6a41afb[m
+Author: Adam Mospan <adammospan@gmail.com>
+Date:   Fri Nov 5 15:00:12 2021 +0200
+
+    Remove redundant tap() helper in index.php (#5719)
+
+[33mcommit 5d22b2464c9d64443ecf60d5788d753430eff7fa[m[33m ([m[1;33mtag: [m[1;33mv8.6.5[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Oct 26 17:20:51 2021 +0200
+
+    Update CHANGELOG.md
+
+[33mcommit 15427830022447443e63991c0e9fc0e3099dbcb9[m
+Author: Can Vural <can9119@gmail.com>
+Date:   Mon Oct 25 20:16:13 2021 +0200
+
+    PHPDoc types should be covariant with the parent type (#5714)
+
+[33mcommit 9915831d22c150d68e562f443aca303151d70a4d[m
+Author: Nuno Maduro <enunomaduro@gmail.com>
+Date:   Fri Oct 22 19:11:06 2021 +0100
+
+    Guess database factory model by default (#5713)
+
+[33mcommit 8f63479d4487915b6dc62cb2f576289ed4cd0b96[m[33m ([m[1;33mtag: [m[1;33mv8.6.4[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Wed Oct 20 15:15:52 2021 +0200
+
+    Update CHANGELOG.md
+
+[33mcommit bf2a67c6a287d16c1926c4e6a3f4fe2e173fabaa[m
+Author: Taylor Otwell <taylorotwell@gmail.com>
+Date:   Tue Oct 19 10:20:44 2021 -0500
+
+    wip
+
+[33mcommit 1980ca13eae79cd6f8a5a2f8dc018c289d26e954[m
+Author: Nuno Maduro <enunomaduro@gmail.com>
+Date:   Tue Oct 19 14:42:24 2021 +0100
+
+    [8.x] Logs deprecations instead of treating them as exceptions (#5711)
+    
+    * Logs deprecations instead of treating them as exceptions
+    
+    * formatting
+    
+    Co-authored-by: Taylor Otwell <taylorotwell@gmail.com>
+
+[33mcommit 196a27593b288f7e4d3ce30585ebd881933726b4[m
+Author: Mohamed ELIDRISSI <67818913+elidrissidev@users.noreply.github.com>
+Date:   Mon Oct 11 14:58:39 2021 +0100
+
+    Remove additional `}` from welcome view inline css (#5702)
+
+[33mcommit a3b76dbeb71518f3b82d50983d039a20bf49ce8e[m[33m ([m[1;33mtag: [m[1;33mv8.6.3[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Oct 5 20:40:50 2021 +0200
+
+    Update CHANGELOG.md
+
+[33mcommit 6a68092228844b1793bbcf4f0bf7c5ba2c9bd16c[m
+Author: Taylor Otwell <taylor@laravel.com>
+Date:   Tue Oct 5 09:23:35 2021 -0500
+
+    Revert "Uses `LazilyRefreshDatabase` by default (#5696)" (#5700)
+    
+    This reverts commit 4578193d52f148c79b16a552db65e29a65fee209.
+
+[33mcommit 78e1d56c4285392f96fd90b445fef2faa7a8b9c7[m
+Author: Alex Elkins <alexelkins2012@gmail.com>
+Date:   Wed Sep 29 16:29:27 2021 -0400
+
+    Update validation.php (#5699)
+    
+    modify the grammar for lte and gte validation to have a parallel structure
+
+[33mcommit 4578193d52f148c79b16a552db65e29a65fee209[m
+Author: Nuno Maduro <enunomaduro@gmail.com>
+Date:   Wed Sep 29 14:20:24 2021 +0100
+
+    Uses `LazilyRefreshDatabase` by default (#5696)
+
+[33mcommit ef9d0e4c78a097fb61218b38dd4e4c55a2278178[m
+Author: Nuno Maduro <enunomaduro@gmail.com>
+Date:   Wed Sep 29 14:17:58 2021 +0100
+
+    Ensures downloaded version of Collision supports PHP 8.1 (#5697)
+    
+    Co-authored-by: Taylor Otwell <taylor@laravel.com>
+
+[33mcommit aa9cb884d2caef6d1e606ffbb61e92c90f9bd6de[m
+Author: Dries Vints <dries@vints.io>
+Date:   Wed Sep 29 11:51:32 2021 +0200
+
+    Bump Mockery and PHPUnit
+
+[33mcommit 5f7395b289f32e5e5f5ece1dddb7d4ecf7ddadcc[m
+Author: JuanDMeGon <JuanDMeGon@users.noreply.github.com>
+Date:   Tue Sep 28 08:03:31 2021 -0500
+
+    Keeping access tokens migration id consistent (#5691)
+    
+    This is just a tiny "fix," using id(); to be consistent with the other migrations already included in the framework.
+
+[33mcommit 1e5b9989c3d789e7ed4269c88e45ed0c1c2b8ce9[m
+Author: Surajit Basak <surajitbasak109@gmail.com>
+Date:   Tue Sep 28 18:29:24 2021 +0530
+
+    [8.x] Add failover in supported mail configurations comment section (#5692)
+    
+    Co-authored-by: Surajit Basak <surajit@adrobit.com>
+
+[33mcommit 4f8a0f35fabd8603fb756122bf820719a259ac9b[m[33m ([m[1;33mtag: [m[1;33mv8.6.2[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Sep 7 16:33:40 2021 +0200
+
+    Update CHANGELOG.md
+
+[33mcommit 0bc525860ccb093f0d452b410b2549b3e01432e7[m
+Author: Samuel Levy <sam+gh@samuellevy.com>
+Date:   Wed Sep 1 07:08:19 2021 +1000
+
+    [8.x] Added `prohibits` validation message (#5681)
+    
+    * Added `prohibits` validation
+    
+    * Update validation.php
+    
+    Co-authored-by: Taylor Otwell <taylor@laravel.com>
+
+[33mcommit a36f02c4f2c5617bfe355709ca1955884b11e2d3[m
+Author: Roy van Veldhuizen <18717340+royvanv@users.noreply.github.com>
+Date:   Wed Aug 25 20:07:32 2021 +0200
+
+    Dark mode auth links contrast (#5678)
+    
+    * Improved contrast ratio of auth links in dark mode.
+    
+    * Restored home link.
+
+[33mcommit 75a7dba9c44ce3555cc57dd1826467839fd9774f[m[33m ([m[1;33mtag: [m[1;33mv8.6.1[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Aug 24 17:59:48 2021 +0200
+
+    Update CHANGELOG.md
+
+[33mcommit 7c993468018d950d549fae77241a53cb4f68e2ad[m
+Author: Maarten Buis <buismaarten@outlook.com>
+Date:   Mon Aug 23 15:47:37 2021 +0200
+
+    [8.x] Use PHPDoc comments from base class in User model (#5676)
+    
+    * Use phpdoc comments from Model class
+    
+    * Update User.php
+
+[33mcommit 8677c94a50f15dd0b21f938c799126efa5d1cc89[m
+Author: Gabriel Pillet <contact@gabrielpillet.com>
+Date:   Mon Aug 23 15:42:15 2021 +0200
+
+    Fixing "Line exceeds 120 characters" in TrustProxies (#5677)
+    
+    To comply with PSR-2
+
+[33mcommit 52de5d84f6c309e93910e0d250b8c42fd656931b[m
+Author: Taylor Otwell <taylorotwell@gmail.com>
+Date:   Fri Aug 20 07:59:36 2021 -0500
+
+    wip
+
+[33mcommit c512ba2b160d1e87205dd45b60d8c0cfab230025[m
+Author: Dries Vints <dries@vints.io>
+Date:   Thu Aug 19 16:03:02 2021 +0200
+
+    Update app.php (#5674)
+
+[33mcommit 3399464a7452ac8067cef8fb224b2413e8991a4b[m
+Author: Dwight Watson <dwightwatson@users.noreply.github.com>
+Date:   Wed Aug 18 23:14:34 2021 +1000
+
+    Add failover driver to default mail config file (#5672)
+    
+    * Add failover driver to default mail config file
+    
+    * Remove empty spaces
+
+[33mcommit b55e3fbb14ab8806057f451fcbfeec8fca625793[m[33m ([m[1;33mtag: [m[1;33mv8.6.0[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Aug 17 17:56:01 2021 +0200
+
+    Update CHANGELOG.md
+
+[33mcommit 6e10e9653f5f2cd3b8bd6b9fe69df2dc002eede2[m
+Author: Pradeep Kumar <webreinvent@gmail.com>
+Date:   Tue Aug 17 18:40:33 2021 +0530
+
+    Add WebReinvent as a Sponsor (#5668)
+
+[33mcommit a199c3bcea13efb32cbd5755ab9588e8311bd19c[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Aug 17 10:22:10 2021 +0200
+
+    Update .styleci.yml
+
+[33mcommit 226d1bfc3c774e24a79e68e9f1264b5ca359551f[m
+Author: Taylor Otwell <taylor@laravel.com>
+Date:   Wed Aug 11 13:44:34 2021 -0500
+
+    [8.x] Sanctum (#5663)
+    
+    * initial sanctum poc
+    
+    * add files
+    
+    * remove token
+
+[33mcommit 236b31872d193eaec8c5e00813e8e88dbab6dca3[m[33m ([m[1;33mtag: [m[1;33mv8.5.24[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Aug 10 19:27:09 2021 +0200
+
+    Update CHANGELOG.md
+
+[33mcommit b6f4ee7661d31ceab2f517a3273aaecfd8465e17[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Aug 10 15:41:29 2021 +0200
+
+    Use new TrustProxies middleware (#5662)
+
+[33mcommit 59f33209d5afc2f9f1c6c3c38280ae9eb5b15aed[m
+Merge: e5962266 ecf460a8
+Author: Graham Campbell <hello@gjcampbell.co.uk>
+Date:   Sun Aug 8 20:15:22 2021 +0100
+
+    Merge branch '6.x' into 8.x
+
+[33mcommit e5962266d79ab4aa3b7e49d1d5cddb7f85c057e6[m
+Author: Cristiano Fromagio <16294559+cristianofromagio@users.noreply.github.com>
+Date:   Thu Aug 5 10:45:48 2021 -0300
+
+    [8.x] Add accepted_if validation rule (#5658)
+    
+    * Add accepted_if validation rule
+    
+    * Update validation.php
+    
+    Co-authored-by: Taylor Otwell <taylor@laravel.com>
+
+[33mcommit 82b5135652f3172c6d4febf1a4da967a49345a79[m[33m ([m[1;33mtag: [m[1;33mv8.5.23[m[33m)[m
+Author: Dries Vints <dries@vints.io>
+Date:   Tue Aug 3 20:12:15 2021 +0200
+
+    Update CHANGELOG.md
