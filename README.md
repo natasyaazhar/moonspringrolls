@@ -25,10 +25,116 @@ This is a simple project showing automation to trigger email by crawling data fr
 
 ## Getting Started
 1. Clone the repo:
-
 ```bash
 git clone https://github.com/natasyaazhar/MoonSpringRolls.git
 cd MoonSpringRolls
+
+2. Install dependencies:
+```bash
+composer install
+
+3. Copy .env.example to .env:
+```bash
+cp .env.example .env
+
+4. Generate the app key:
+```bash
+php artisan key:generate
+
+5. Set folder permissions:
+```bash
+chmod -R 775 storage bootstrap/cache
+
+6. Start the server:
+```bash
+php artisan serve
+
+7. Visit http://127.0.0.1:8000 (ctrl+left click) to see the dashboard
+
+
+---
+
+## Environment Variables 
+APP_NAME=MoonSpringRolls
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=moonspringrolls
+DB_USERNAME=root
+DB_PASSWORD=
+
+QUEUE_CONNECTION=sync
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-app-password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=your-email@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
+
+GOOGLE_SHEET_ID=your_google_sheet_id_here ##For Gmail, you’ll need an App Password if 2FA is enabled
+
+
+---
+
+## Database
+1. Create a MySQL database called moonspringrolls.
+
+2. Run migration
+```bash
+php artisan migrate
+
+3. Optional: add a test parcel:
+```bash
+php artisan tinker
+>>> App\Models\ParcelUpdate::create([
+... 'name' => 'Test User',
+... 'email' => 'test@example.com',
+... 'parcel_status' => 'Out For Delivery'
+... ]);
+
+
+---
+
+## Google Sheets Setup
+1. Create a Service Account in Google Cloud Console
+
+2. Download the JSON credentials into storage/app/google/.
+
+3. Share your Google Sheet with the service account email.
+
+4. Set the Google_SHEET_ID in .env.
+
+5. Test syncing:
+```bash
+php artisa parcel:sync        #Make sure your sheet has at least these columns: Name | Email | Parcel Status | Tracking Number
+
+
+---
+
+## Sending Emails
+- Emails are sent using Laravel Mail + Gmail SMTP.
+- Only parcels with parcel_status = Out For Delivery AND updated_at = null will get emails.
+- Queue driver is sync, so emails send immediately when the job runs.
+
+
+---
+
+## Usage
+- Open the dashboard (http://127.0.0.1:8000).
+- Click Sync Spreadsheet to update DB from Google Sheets.
+- Click Send OFD Emails to send emails to pending parcels.
+- Timestamps show in human format using diffForHumans() (like “3 minutes ago”)
+
+
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
