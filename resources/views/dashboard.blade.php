@@ -88,7 +88,7 @@
                                 </span>
                             </td>
                             <td>
-                                @if($parcel['parcel_status'] == 'Out For Delivery')
+                                @if($parcel['updated_at'] != 'Not sent yet')
                                 <span class="status-sent">
                                     ✔ Sent
                                 </span>

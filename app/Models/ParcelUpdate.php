@@ -23,13 +23,12 @@ class ParcelUpdate extends Model
     
     public static function createParcel ($name, $email, $parcel_status) {
 
-        return self::updateOrCreate(
+        return self::firstOrCreate(
             [   'name'          => $name],
             [
-                // 'name'          => $name,
                 'email'         => $email,
                 'parcel_status' => $parcel_status,
-                'created_at'    => now(),  
+                'created_at'    => now(),
                 'updated_at'    => null
             ]
         );

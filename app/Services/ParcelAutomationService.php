@@ -40,10 +40,27 @@ class ParcelAutomationService
 
             $parcel = ParcelUpdate::createParcel($name, $email, $parcel_status);
 
-            if (!$parcel->updated_at && $parcel->parcel_status == 'Out For Delivery') {
+            /*if (!$parcel->updated_at && $parcel->parcel_status == 'Out For Delivery') {
                 DispatchParcelNotification::dispatch($parcel);
 
                 // mark as notified
+                $parcel->update(['updated_at' => now()]);
+            }*/
+
+            // Update status if changed (but don't touch updated_at yet)
+            if ($parcel->parcel_status !== $parcel_status) {
+                $parcel->parcel_status = $parcel_status;
+                $parcel->saveQuietly(); // avoids changing updated_at manually
+            }
+
+            // Only send email if status is 'Out For Delivery' AND updated_at is null
+            if($parcel->updated_at == null){
+
+            } else if ($parcel['created_at'] != null && $parcel->parcel_status === 'Out For Delivery' && !$parcel->updated_at) {
+                dd('nth updated', $parcel->created_at);
+                DispatchParcelNotification::dispatch($parcel);
+
+                // Mark as notified after sending
                 $parcel->update(['updated_at' => now()]);
             }
 
