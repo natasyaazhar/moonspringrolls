@@ -27,7 +27,7 @@ class ParcelAutomationService
     public function processSheetRows($rows)
     {
 
-        foreach ($rows as $row) {
+        foreach ($rows as $row) {                               //system will loops through each row retrieved from spreadsheet
 
             $name               = $row[0] ?? null;
             $email              = $row[1] ?? null;
@@ -38,7 +38,7 @@ class ParcelAutomationService
                 continue;
             }
 
-            $parcel = ParcelUpdate::createParcel($name, $email, $parcel_status);
+            $parcel = ParcelUpdate::createParcel($name, $email, $parcel_status);            //parcel info will stored in database using laravel Eloquent
 
             /*if (!$parcel->updated_at && $parcel->parcel_status == 'Out For Delivery') {
                 DispatchParcelNotification::dispatch($parcel);
@@ -54,10 +54,9 @@ class ParcelAutomationService
             }
 
             // Only send email if status is 'Out For Delivery' AND updated_at is null
-            if($parcel->updated_at == null){
+            if($parcel->updated_at == null){        //first sync will not send email to cust
 
-            } else if ($parcel['created_at'] != null && $parcel->parcel_status === 'Out For Delivery' && !$parcel->updated_at) {
-                dd('nth updated', $parcel->created_at);
+            } else if ($parcel['created_at'] != null && $parcel->parcel_status === 'Out For Delivery' && !$parcel->updated_at) {        //will send email when triggered
                 DispatchParcelNotification::dispatch($parcel);
 
                 // Mark as notified after sending

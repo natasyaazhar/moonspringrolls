@@ -8,7 +8,7 @@ use Google\Service\Sheets;
 class GoogleSheetService
 {
 
-    public function fetchRows()
+    public function fetchRows()         //here responsible for connecting google sheet API and retrive spread sheet data
     {
 
         $client = new Client();

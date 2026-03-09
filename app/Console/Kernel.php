@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->command('parcel:sync')->everyMinutes()->withoutOverlapping();
+        $schedule->command('parcel:sync')->everyMinutes()->withoutOverlapping();        //extra function where run command every minutes/hourly/daily to check new parcel updates
     }
 
     /**

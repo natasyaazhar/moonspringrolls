@@ -37,7 +37,7 @@ class DispatchParcelNotification //++ implements ShouldQueue
      */
     public function handle()
     {
-        try {
+        try {           //here, job handle sending email noti to customer
 
         Log::info("DispatchParcelNotification: Sending email to {$this->parcel->email}");
         Mail::to($this->parcel->email)
